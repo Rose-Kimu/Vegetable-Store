@@ -1,0 +1,27 @@
+
+{% extends 'myapp/base.html' %}
+{% block title %}<title>Payment</title>{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block this %}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="border p-3 bg-white">
+                <h3>Payment via Mpesa</h3>
+                <hr>
+                <form method="POST">
+                    {% csrf_token %}
+                    <p>Enter your phone number:</p>
+                    <input type="text" class="" placeholder="e.g 0712345678" name="phone_number"><br>
+                    <br>
+                    <input type="submit" value="Enter" class="btn btn-success">
+                    <a href="{% url 'cart' %}" class="btn btn-secondary">I changed my mind</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

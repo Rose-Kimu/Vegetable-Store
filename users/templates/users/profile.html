@@ -1,0 +1,41 @@
+{% extends 'user/base.html' %}
+{% block title %}<title>Profile Page</title>{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <!-- <div class="border p-3 bg-white"> -->
+                <div class="card  " style="width: 500px; background-color: rgba(240, 227, 227, 0.856)">
+                    <div class="card-header bg-info">
+                            
+                        <h6 class="card-title text-light"> Profile Page </h6> 
+                    </div>
+                    <div class="card-body">
+                        <h5>Profile Information </h5>
+                        <hr>
+                        <br>
+                        <h6 class="card-text text-dark"> Student Number : {{object.student_number}}</h6>
+                        <h6 class="card-text text-dark"> Gender         : {{object.gender}}</h6>
+                        <h6 class="card-text text-dark"> Email          : {{object.email}}</h6>
+                        <h6 class="card-text text-dark"> Field Of Study : {{object.field_of_study}}</h6>
+                        <h6 class="card-text text-dark"> GPA            : {{object.gpa}}</h6>
+                    </div>
+                    <br>
+                    <br>
+                <a href="{% url 'home' %}" class="btn text-dark">&#x2190; Close </a>
+                <br>
+                </div>
+                
+            <!-- </div> -->
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

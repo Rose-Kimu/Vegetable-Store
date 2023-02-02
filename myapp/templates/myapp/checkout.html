@@ -1,0 +1,36 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}<title>Payment</title>{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block this %}
+<div class="row">
+    <div class="col-lg-4 offset-md-3">
+        <div class="box-element">
+            <h6>Payment Options:</h6>
+            <hr>
+    
+            <a href="{% url 'payment' %}">
+                <img class="img-fluid " style="width: 130px;" src="{% static 'images/mpesa-logo.png' %}"><br><br>
+                <button class="btn btn-outline-success">Pay Using Mpesa</button>
+            </a>
+            <br>
+            <hr>
+            <a href="{% url 'paypal' %}">
+                <img class="img-fluid " style="width: 130px;" src="{% static 'images/paypal2.avif' %}"><br>
+                <button class="btn btn-outline-primary">Pay Using PayPal</button>
+            </a>
+            <br>
+            <hr>
+
+            <a href="{% url 'cart' %}" class="btn btn-dark text-white" >Back to Cart</a>
+            
+        </div>
+    </div>
+    
+    
+    
+</div>
+
+
+{% endblock %}

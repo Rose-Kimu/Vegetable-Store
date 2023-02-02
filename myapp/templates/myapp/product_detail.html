@@ -1,0 +1,19 @@
+{% extends 'myapp/base.html' %}
+{% block this %}
+<a href="{% url 'home' %}" class="btn btn-secondary">&#x2190; Back Home </a>
+<div style="position: relative; right: 50%; left: 30%; top:0%;">   
+    <div class="card " style="width: 400px; background-color: rgb(45, 155, 182)">
+        <div class="card-header">
+                
+            <h4 class="card-title text-light"> {{object.name}} </h4> 
+        </div>
+        <img class="card-img-top" src="{{object.imageURL}}">
+        <div class="card-body">
+            <h6 class="card-text text-light"> {{object.info}}</h6>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}
